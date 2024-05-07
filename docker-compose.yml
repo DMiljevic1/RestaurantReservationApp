@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  restaurantreservationapp.api:
+    image: ${DOCKER_REGISTRY-}restaurantreservationappapi
+    build:
+      context: .
+      dockerfile: RestaurantReservationApp.API/Dockerfile
+    ports:
+      - "6000:6000"
+      - "6001:6001" 
+  restaurantreservationapp.database:
+    image: postgres:latest
+    container_name: restaurantreservationapp.database
+    environment:
+      - POSTGRES_DB=RestaurantReservation
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - /var/lib/postgresql/data 
+    ports:
+      - 5432:5432 
