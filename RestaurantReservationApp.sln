@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantReservationApp.API", "RestaurantReservationApp.API\RestaurantReservationApp.API.csproj", "{748BC695-5627-4F56-A243-064662D90733}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservationApp.API", "RestaurantReservationApp.API\RestaurantReservationApp.API.csproj", "{748BC695-5627-4F56-A243-064662D90733}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantReservationApp.Domain", "RestaurantReservationApp.Domain\RestaurantReservationApp.Domain.csproj", "{1B16F9AB-7E36-4CE8-AB87-690A735C50EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservationApp.Domain", "RestaurantReservationApp.Domain\RestaurantReservationApp.Domain.csproj", "{1B16F9AB-7E36-4CE8-AB87-690A735C50EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantReservationApp.Infrastructure", "RestaurantReservationApp.Infrastructure\RestaurantReservationApp.Infrastructure.csproj", "{9FFAFB24-6DAE-4524-9D72-E8291A33D3C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservationApp.Infrastructure", "RestaurantReservationApp.Infrastructure\RestaurantReservationApp.Infrastructure.csproj", "{9FFAFB24-6DAE-4524-9D72-E8291A33D3C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantReservationApp.Application", "RestaurantReservationApp.Application\RestaurantReservationApp.Application.csproj", "{D344E2EA-9DE8-4BA7-840E-BDEB9A9B0D24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantReservationApp.Application", "RestaurantReservationApp.Application\RestaurantReservationApp.Application.csproj", "{D344E2EA-9DE8-4BA7-840E-BDEB9A9B0D24}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{34A6A7EF-AA4B-41A6-8534-1860CFD47A2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D344E2EA-9DE8-4BA7-840E-BDEB9A9B0D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D344E2EA-9DE8-4BA7-840E-BDEB9A9B0D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D344E2EA-9DE8-4BA7-840E-BDEB9A9B0D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34A6A7EF-AA4B-41A6-8534-1860CFD47A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A6A7EF-AA4B-41A6-8534-1860CFD47A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A6A7EF-AA4B-41A6-8534-1860CFD47A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A6A7EF-AA4B-41A6-8534-1860CFD47A2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
