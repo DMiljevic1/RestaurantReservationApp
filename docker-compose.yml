@@ -9,6 +9,10 @@ services:
     ports:
       - "6000:6000"
       - "6001:6001" 
+    depends_on:
+      - restaurantreservationapp.database
+    networks:
+      - mynetwork
   restaurantreservationapp.database:
     image: postgres:latest
     container_name: restaurantreservationapp.database
@@ -17,6 +21,14 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - /var/lib/postgresql/data 
+      - postgres_data:/var/lib/postgresql/data
     ports:
-      - 5432:5432 
+      - 54320:5432
+    networks:
+      - mynetwork
+
+volumes:
+  postgres_data:
+    driver: local
+networks:
+  mynetwork:
