@@ -1,6 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using RestaurantReservationApp.API.Extensions;
+using RestaurantReservationApp.Domain.Repositories;
 using RestaurantReservationApp.Infrastructure.DatabaseContext;
+using RestaurantReservationApp.Infrastructure.Repositories;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
+using RestaurantReservationApp.Application;
+using System.Reflection;
+using RestaurantReservationApp.Application.Common.User.Handlers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +18,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<RestaurantDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultDatabase")));
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AddUserHandler).Assembly));
 
 var app = builder.Build();
 
