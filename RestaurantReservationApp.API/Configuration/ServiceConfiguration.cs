@@ -17,6 +17,7 @@ namespace RestaurantReservationApp.API.Configuration
         {
             services.AddDbContext<RestaurantDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("DefaultDatabase")));
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IRestaurantRepository, RestaurantRepository>();
         }
 
         private static void ConfigureApplicationServices(IServiceCollection services, IConfiguration configuration)
